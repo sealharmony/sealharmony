@@ -1,0 +1,341 @@
+/* Umum */
+body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Menghilangkan scroll horizontal */
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 35px;
+  background-color: #000000;
+  position: fixed; /* Header tetap di atas */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Pastikan header di atas konten */
+}
+
+.header .logo {
+  font-size: 16px; /* Atur ukuran font "SEAL HARMONY" */
+  font-weight: bold;
+}
+
+.header .logo h1 {
+  font-family: "Keania One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0; /* Hapus margin default h1 */
+}
+
+.header nav {
+  display: flex; /* Untuk mengatur navigasi menjadi baris */
+}
+
+.header nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 14px; /* Ukuran font menu navigasi */
+  padding: 10px 20px; /* Tambahkan padding untuk tombol */
+  border: 2px solid #ff6600; /* Tambahkan border */
+  border-radius: 5px; /* Buat sudut tombol sedikit membulat */
+  transition: all 0.3s ease-in-out; /* Animasi transisi */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Bayangan */
+  cursor: pointer; /* Tampilkan kursor pointer */
+}
+
+.header nav a:hover {
+  background-color: #ff6600; /* Warna latar belakang saat hover */
+  color: #fff; /* Warna teks saat hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Bayangan saat hover */
+  transform: translateY(-2px); /* Angkat tombol sedikit saat hover */
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  padding: 20px 50px;
+  font-size: 14px;
+  margin-top: 70px; /* Jarak dari header */
+}
+
+.breadcrumb a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+  padding: 20px 50px;
+}
+
+.main-content h1 {
+  color: #ff6600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Membungkus filter ke baris baru jika diperlukan */
+  gap: 10px; /* Jarak antar filter */
+}
+
+.filters select {
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  flex: 1; /* Menyesuaikan lebar select agar mengisi ruang yang tersedia */
+  border-radius: 5px; /* Sudut sedikit membulat */
+  appearance: none; /* Menghapus tampilan default select */
+  -webkit-appearance: none; /* Untuk Chrome */
+  -moz-appearance: none; /* Untuk Firefox */
+  padding-right: 30px; /* Ruang untuk arrow */
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z'/%3E%3C/svg%3E"); /* Arrow */
+  background-position: right 10px center; /* Posisi arrow */
+  background-repeat: no-repeat; /* Tidak mengulang gambar */
+  background-size: 16px 16px; /* Ukuran arrow */
+}
+
+/* Product Grid */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Menyelaraskan produk di tengah */
+}
+
+.product-card {
+  background-color: #363333;
+  padding: 20px;
+  width: calc(33.33% - 20px); /* Lebar 33.33% per kartu */
+  box-sizing: border-box;
+  border-radius: 10px;
+  text-align: center;
+  position: relative; /* Untuk overlay */
+  transition: transform 0.3s ease; /* Animasi transisi */
+  overflow: hidden; /* Mengatur agar gambar tidak keluar dari container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan */
+}
+
+.product-card:hover {
+  transform: scale(1.1); /* Membesarkan kartu saat hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Bayangan saat hover */
+}
+
+.product-card a {
+  display: block; /* Pastikan link mengisi seluruh area gambar */
+  cursor: pointer; /* Menampilkan kursor pointer saat melayang di atas */
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Animasi transisi */
+  object-fit: cover; /* Mengatur gambar agar sesuai dengan container */
+}
+
+.product-card img:hover {
+  transform: scale(1.1); /* Membesarkan gambar saat hover */
+}
+
+.product-card h2 {
+  font-size: 16px; /* Mengurangi ukuran font */
+  margin: 10px 0;
+  color: #ff6600;
+}
+
+.product-card .size {
+  font-size: 12px; /* Mengurangi ukuran font */
+  color: #cccccc;
+}
+
+.product-card .price {
+  color: #ff6600;
+  font-size: 14px; /* Mengurangi ukuran font */
+  margin: 5px 0;
+}
+
+.product-card .rating {
+  color: #ff6600;
+  margin: 5px 0;
+}
+
+/* Overlay */
+.product-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang overlay */
+  opacity: 0; /* Awalnya transparan */
+  transition: opacity 0.3s ease; /* Animasi transisi */
+  z-index: 1; /* Pastikan overlay di atas konten */
+  border-radius: 10px; /* Sudut sedikit membulat */
+}
+
+.product-card:hover::before {
+  opacity: 1; /* Menampilkan overlay saat hover */
+}
+
+/* Tombol di overlay */
+.product-card .button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ff6600; /* Warna tombol */
+  color: #fff; /* Warna teks tombol */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0; /* Awalnya transparan */
+  transition: opacity 0.3s ease; /* Animasi transisi */
+  z-index: 2; /* Pastikan tombol di atas overlay */
+}
+
+.product-card:hover .button {
+  opacity: 1; /* Menampilkan tombol saat hover */
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .product-card {
+    width: calc(100% - 20px); /* Lebar 100% untuk layar kecil */
+  }
+
+  .header nav {
+    flex-direction: column; /* Mengatur navigasi menjadi kolom */
+    align-items: flex-start; /* Menyelaraskan item navigasi ke kiri */
+  }
+
+  .header nav a {
+    margin-bottom: 10px; /* Jarak antar item navigasi */
+  }
+}
+
+/* ... kode CSS lainnya ... */
+
+/* Footer */
+.footer {
+  background-color: #333; /* Warna latar belakang footer */
+  color: #fff; /* Warna teks footer */
+  padding: 40px 0; /* Padding footer */
+  text-align: center; /* Teks footer di tengah */
+  position: relative; /* Untuk menambahkan posisi relatif */
+  bottom: 0; /* Posisi footer di bagian bawah */
+  width: 100%; /* Lebar footer penuh */
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column; /* Atur elemen untuk vertikal*/
+  align-items: center;
+  flex-wrap: wrap; /* Membungkus elemen ke baris baru jika diperlukan */
+}
+
+.footer .logo {
+  /* Menghapus margin kanan */
+  margin-right: 0;
+  /* Menyelaraskan logo ke tengah */
+  text-align: center;
+}
+
+.footer .contact-info {
+  display: flex;
+  justify-content: space-between; /* Atur elemen untuk rata kanan-kiri */
+  align-items: center;
+  width: 100%; /* Lebar contact-info penuh */
+  margin-top: 30px; /* Margin atas contact-info */
+}
+
+.footer .contact-info div {
+  /* Mengatur margin untuk elemen contact-info */
+  margin: 0 20px; 
+}
+
+.footer .quote-button {
+  /* Menambahkan gaya untuk tombol Get a Quote */
+  background-color: #ff7b00; /* Warna latar belakang tombol */
+  color: #fff; /* Warna teks tombol */
+  padding: 12px 25px; /* Padding tombol */
+  border: none; /* Menghilangkan border */
+  border-radius: 5px; /* Mengatur border-radius */
+  font-weight: bold; /* Mengatur font-weight */
+  cursor: pointer; /* Mengatur kursor menjadi pointer */
+  transition: all 0.3s ease; /* Menambahkan transisi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan box-shadow */
+}
+
+.footer .quote-button:hover {
+  /* Efek hover untuk tombol */
+  background-color: #ffcc00; /* Warna latar belakang saat hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Menambahkan box-shadow */
+  transform: translateY(-2px); /* Mengangkat tombol sedikit */
+}
+
+.footer .social-icons {
+  margin-top: 30px; /* Margin atas social-icons */
+  width: 100%; /* Lebar social-icons penuh */
+  display: flex;
+  justify-content: center; /* Atur elemen untuk rata ke tengah */
+}
+
+.footer .social-icons a {
+  /* Mengatur jarak antar ikon social media */
+  margin: 0 10px;
+  font-size: 24px; /* Mengatur ukuran font ikon */
+  transition: all 0.3s ease; /* Menambahkan transisi */
+  color: #ffcc00; /* Warna ikon */
+}
+
+.footer .social-icons a:hover {
+  /* Efek hover untuk ikon social media */
+  color: #d4af37; /* Warna ikon saat hover */
+  transform: scale(1.1); /* Mengatur skala ikon saat hover */
+}
+
+.logo-text {
+  font-family: 'Keania One', sans-serif;
+  font-size: 24px;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  /* Penyesuaian untuk layar kecil */
+  .footer .contact-info {
+    flex-direction: column; /* Menampilkan elemen secara vertikal */
+  }
+
+  .footer .contact-info div {
+    margin-bottom: 10px; /* Memberikan margin bawah untuk setiap elemen */
+  }
+
+  .footer .social-icons {
+    margin-top: 20px; /* Menyesuaikan margin atas */
+  }
+
+   
+  .footer .social-icons a {
+    font-size: 20px; /* Mengatur ukuran font ikon */
+   
+  }
+}

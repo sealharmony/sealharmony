@@ -1,0 +1,384 @@
+/* Umum */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #d3d3d3;
+}
+
+/* Header */
+.header {
+    background-color: #333;
+    color: #d3b8b8;
+    text-align: center;
+    padding: 30px 0; /* Mengurangi padding */
+}
+
+.header h1 {
+    font-size: 80px; /* Mengurangi ukuran font */
+    margin: 0;
+    font-family: 'Keania One', sans-serif; /* Gunakan nama font yang benar */
+}
+
+.header h2 {
+    font-size: 39px; /* Mengurangi ukuran font */
+    margin: 0;
+}
+
+/* Navigasi */
+.nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px; /* Mengurangi padding */
+}
+
+.nav .links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Membungkus elemen ke baris baru jika diperlukan */
+}
+
+/* Menyamakan gaya semua tombol */
+.nav .links a,
+.nav .links button {
+    color: #fff; /* Warna teks awal */
+    text-decoration: none;
+    font-size: 12px; /* Mengurangi ukuran font */
+    padding: 8px 15px; /* Mengurangi padding */
+    border: none;
+    border-radius: 9px; /* Membuat sudut tombol sedikit membulat */
+    transition: all 0.3s ease-in-out; /* Menambahkan transisi untuk semua properti selama 0.3 detik */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    background-color: #474444; /* Warna latar belakang tombol */
+}
+
+.nav .links a:hover,
+.nav .links button:hover {
+    background-color: #ff7b00; /* Warna latar belakang saat hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px); /* Mengangkat tombol sedikit saat hover */
+}
+
+/* Sosial Media */
+.nav .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav .social-icons a {
+    color: #fff;
+    font-size: 20px; /* Mengurangi ukuran font */
+    transition: all 0.3s ease-in-out;
+}
+
+.nav .social-icons a:hover {
+    color: #ff7b00;
+    transform: scale(1.1);
+}
+
+/* Konten */
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.content h3 {
+    font-size: 36px;
+    font-family: 'Georgia', serif;
+    margin: 0 0 20px 0;
+}
+
+.content p {
+    font-size: 18px;
+    color: #201e1e;
+}
+
+/* Call to Action */
+.cta {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cta a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #007bff; /* Warna biru */
+    color: #fff; /* Warna putih */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .cta a:hover {
+    background-color: #0056b3; /* Warna biru lebih gelap */
+  }
+
+.cta button:hover {
+    transform: translateY(-2px); /* Mengangkat tombol sedikit */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Bayangan yang lebih kuat */
+}
+
+/* Section */
+.section {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #d4af37;
+}
+
+.section p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    font-family: 'Playfair Display', serif; /* Jenis font */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff7b00;
+}
+
+/* Images */
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.images img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.images img:hover {
+    transform: scale(1.1);
+}
+
+/* Products */
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.products img {
+    width: 150px;
+    height: auto;
+    border: 1px solid #d4af37;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.products img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 75px; /* Mengurangi ukuran font h1 pada layar kecil */
+    }
+
+    .header h2 {
+        font-size: 38px; /* Mengurangi ukuran font h2 pada layar kecil */
+    }
+
+    .nav .links {
+        flex-direction: column; /* Menampilkan elemen navigasi secara vertikal */
+        align-items: flex-start; /* Menyelaraskan elemen ke kiri */
+    }
+
+    .nav .links a,
+    .nav .links button {
+        margin-bottom: 10px; /* Menambahkan margin bawah untuk elemen navigasi */
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; /* Membungkus item ke baris baru jika diperlukan */
+        margin-top: 40px;
+        gap: 20px; /* Jarak antar item */
+    }
+
+    
+
+    .content img {
+        width: 100%; /* Lebar gambar menyesuaikan container */
+        max-width: 200px; /* Batas lebar maksimum gambar */
+        height: auto; /* Tinggi gambar menyesuaikan lebar */
+        border-radius: 50%;
+        cursor: pointer; /* Menambahkan kursor pointer */
+    }
+}
+
+/* ... kode CSS lainnya ... */
+
+/* Testimoni */
+.testimonials {
+    padding: 30px; /* Tambah padding */
+    background-color: #f0f0f0;
+    margin-top: 40px;
+    border-radius: 10px; /* Tambah border-radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambah box-shadow */
+}
+
+.testimonial {
+    border: 1px solid #ddd;
+    padding: 20px; /* Tambah padding */
+    margin-bottom: 20px;
+    background-color: #fff; /* Tambah background-color */
+    border-radius: 10px; /* Tambah border-radius */
+}
+
+.testimonial p {
+    font-size: 16px; /* Atur ukuran font */
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.testimonial strong {
+    font-weight: bold; /* Teks nama pelanggan lebih tebal */
+    display: block;
+    margin-top: 10px;
+}
+
+/* ... kode CSS lainnya ... */
+ 
+ /* ... kode CSS lainnya ... */
+
+/* Footer */
+.footer {
+    background-color: #333; /* Warna latar belakang footer */
+    color: #fff; /* Warna teks footer */
+    padding: 40px 0; /* Padding footer */
+    text-align: center; /* Teks footer di tengah */
+    position: relative; /* Untuk menambahkan posisi relatif */
+    bottom: 0; /* Posisi footer di bagian bawah */
+    width: 100%; /* Lebar footer penuh */
+  }
+  
+  .footer .container {
+    display: flex;
+    flex-direction: column; /* Atur elemen untuk vertikal*/
+    align-items: center;
+    flex-wrap: wrap; /* Membungkus elemen ke baris baru jika diperlukan */
+  }
+  
+  .footer .logo {
+    /* Menghapus margin kanan */
+    margin-right: 0;
+    /* Menyelaraskan logo ke tengah */
+    text-align: center;
+  }
+  
+  .footer .contact-info {
+    display: flex;
+    justify-content: space-between; /* Atur elemen untuk rata kanan-kiri */
+    align-items: center;
+    width: 100%; /* Lebar contact-info penuh */
+    margin-top: 30px; /* Margin atas contact-info */
+  }
+  
+  .footer .contact-info div {
+    /* Mengatur margin untuk elemen contact-info */
+    margin: 0 20px; 
+  }
+  
+  .footer .quote-button {
+    /* Menambahkan gaya untuk tombol Get a Quote */
+    background-color: #ff7b00; /* Warna latar belakang tombol */
+    color: #fff; /* Warna teks tombol */
+    padding: 12px 25px; /* Padding tombol */
+    border: none; /* Menghilangkan border */
+    border-radius: 5px; /* Mengatur border-radius */
+    font-weight: bold; /* Mengatur font-weight */
+    cursor: pointer; /* Mengatur kursor menjadi pointer */
+    transition: all 0.3s ease; /* Menambahkan transisi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan box-shadow */
+  }
+  
+  .footer .quote-button:hover {
+    /* Efek hover untuk tombol */
+    background-color: #ffcc00; /* Warna latar belakang saat hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Menambahkan box-shadow */
+    transform: translateY(-2px); /* Mengangkat tombol sedikit */
+  }
+  
+  .footer .social-icons {
+    margin-top: 30px; /* Margin atas social-icons */
+    width: 100%; /* Lebar social-icons penuh */
+    display: flex;
+    justify-content: center; /* Atur elemen untuk rata ke tengah */
+  }
+  
+  .footer .social-icons a {
+    /* Mengatur jarak antar ikon social media */
+    margin: 0 10px;
+    font-size: 24px; /* Mengatur ukuran font ikon */
+    transition: all 0.3s ease; /* Menambahkan transisi */
+    color: #ffcc00; /* Warna ikon */
+  }
+  
+  .footer .social-icons a:hover {
+    /* Efek hover untuk ikon social media */
+    color: #d4af37; /* Warna ikon saat hover */
+    transform: scale(1.1); /* Mengatur skala ikon saat hover */
+  }
+  
+  .logo-text {
+    font-family: 'Keania One', sans-serif;
+    font-size: 24px;
+  }
+  
+  /* Responsivitas */
+  @media (max-width: 768px) {
+    /* Penyesuaian untuk layar kecil */
+    .footer .contact-info {
+      flex-direction: column; /* Menampilkan elemen secara vertikal */
+    }
+  
+    .footer .contact-info div {
+      margin-bottom: 10px; /* Memberikan margin bawah untuk setiap elemen */
+    }
+  
+    .footer .social-icons {
+      margin-top: 20px; /* Menyesuaikan margin atas */
+    }
+  
+     
+    .footer .social-icons a {
+      font-size: 20px; /* Mengatur ukuran font ikon */
+     
+    }
+  }
+  
+  /* ... kode CSS lainnya ... */
+
+/* Kode Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Keania+One&display=swap');

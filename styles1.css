@@ -1,0 +1,503 @@
+/* Umum */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.6;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  background-color: #222; /* Warna hitam keabu-abuan */
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+  display: flex; /* Mengatur header sebagai flexbox */
+  justify-content: space-between; /* Menata elemen header secara horizontal */
+  align-items: center; /* Menyejajarkan elemen secara vertikal */
+}
+
+.logo {
+  text-align: center; /* Menengahkan logo teks */
+  margin-bottom: 20px; /* Menambahkan margin bawah untuk logo */
+  width: 100%; /* Menyesuaikan lebar logo */
+}
+
+.logo-text {
+  font-family: 'Keania One', cursive; /* Mengubah Font "SEAL HARMONY" */
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff; /* Warna putih untuk kontras */
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex; /* Menata navigasi sebagai flexbox */
+  justify-content: flex-end; /* Menata navigasi dan ikon sosial secara horizontal */
+  align-items: center; /* Menyejajarkan elemen navigasi secara vertikal */
+  margin-bottom: 10px; /* Menambahkan margin bawah untuk navigasi */
+  width: 100%; /* Menyesuaikan lebar navigasi */
+}
+
+nav a {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff; /* Warna putih untuk kontras */
+  transition: color 0.3s ease;
+  padding: 10px 20px; /* Tambah padding untuk tombol */
+  border-radius: 5px; /* Tambah radius batas untuk tombol */
+  background-color: transparent; /* Background transparan */
+  border: 2px solid #fff; /* Tambah border putih */
+}
+
+nav a:hover {
+  color: #007bff;
+  background-color: #007bff; /* Warna biru saat hover */
+  border-color: #007bff; /* Border biru saat hover */
+}
+
+.social-icons {
+  display: flex; /* Menata ikon sosial sebagai flexbox */
+  justify-content: flex-end; /* Menata ikon sosial di ujung kanan */
+  align-items: center; /* Menyejajarkan elemen ikon sosial secara vertikal */
+  width: 100%; /* Menyesuaikan lebar ikon sosial */
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 18px;
+  color: #fff; /* Warna putih untuk kontras */
+  transition: color 0.3s ease;
+  padding: 10px 15px; /* Tambah padding untuk tombol */
+  border-radius: 50%; /* Bentuk bulat untuk ikon */
+  background-color: transparent; /* Background transparan */
+  border: 2px solid #fff; /* Tambah border putih */
+}
+
+.social-icons a:hover {
+  color: #007bff;
+  background-color: #007bff; /* Warna biru saat hover */
+  border-color: #007bff; /* Border biru saat hover */
+}
+ 
+
+/* Breadcrumb */
+.breadcrumb {
+  background-color: #f0f0f0;
+  padding: 10px 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.breadcrumb a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Featured */
+.featured {
+  margin-bottom: 40px;
+}
+
+.featured h2 {
+  margin-bottom: 10px;
+}
+
+.featured p {
+  margin-bottom: 20px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.features div {
+  text-align: center;
+  width: calc(33.33% - 20px);
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease;
+}
+
+.features div i {
+  font-size: 48px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.features div h3 {
+  margin-bottom: 5px;
+}
+
+.features div p {
+  margin-bottom: 10px;
+}
+
+.features div a {
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.features div a:hover {
+  background-color: #0056b3;
+}
+
+.features div:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.stats div {
+  text-align: center;
+  width: calc(25% - 20px);
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease;
+}
+
+.stats div h3 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.stats div p {
+  font-size: 14px;
+  color: #666;
+}
+
+.stats div:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* About */
+.about {
+  margin-bottom: 40px;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.about-content img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.about-content img:hover {
+  transform: translateY(-5px);
+}
+
+.about-content div {
+  width: calc(50% - 30px);
+  padding: 20px;
+  background-color: #fff; /*  Add background color */
+  border-radius: 5px; /* Add rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.about-content h2 {
+  margin-bottom: 10px;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+}
+
+.about-content a {
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.about-content a:hover {
+  background-color: #0056b3;
+}
+
+/* Benefit */
+.benefit {
+  margin-bottom: 40px;
+}
+
+.perks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.perks div {
+  text-align: center;
+  width: calc(33.33% - 20px);
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease;
+}
+
+.perks div i {
+  font-size: 48px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.perks div h3 {
+  margin-bottom: 5px;
+}
+
+.perks div p {
+  margin-bottom: 10px;
+}
+
+.perks div:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Sales */
+.sales {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.sales div {
+  width: calc(50% - 20px);
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease;
+}
+
+.sales div img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.sales div img:hover {
+  transform: translateY(-5px);
+}
+
+.sales div h3 {
+  margin-bottom: 5px;
+}
+
+.sales div p {
+  margin-bottom: 10px;
+}
+
+.sales div a {
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.sales div a:hover {
+  background-color: #0056b3;
+}
+
+.sales div:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Section Dark */
+.section-dark {
+  background-color: #333;
+  color: #0e0d0d;
+  padding: 40px 0;
+}
+
+/* Section About */
+.section-about {
+  background-color: #fcfafa; /* Warna latar belakang */
+  padding: 40px 0; /* Padding untuk bagian */
+  text-align: center; /* Teks di tengah */
+}
+
+.section-about h2 {
+  font-size: 36px; /* Ukuran font judul */
+  margin-bottom: 20px; /* Margin bawah judul */
+  color: #333; /* Warna judul */
+  font-weight: bold; /* Teks lebih tebal */
+}
+
+.section-about p {
+  font-size: 16px; /* Ukuran font paragraf */
+  line-height: 1.6; /* Jarak antar baris */
+  max-width: 700px; /* Lebar maksimum paragraf */
+  margin: 0 auto 20px; /* Margin untuk paragraf */
+}
+
+/* Section Story */
+.section-story {
+  background-color: #e7dede; /* Warna latar belakang */
+  padding: 40px 0; /* Padding untuk bagian */
+  text-align: center; /* Teks di tengah */
+}
+
+.section-story h2 {
+  font-size: 36px; /* Ukuran font judul */
+  margin-bottom: 20px; /* Margin bawah judul */
+  color: #333; /* Warna judul */
+  font-weight: bold; /* Teks lebih tebal */
+}
+
+.section-story p {
+  font-size: 16px; /* Ukuran font paragraf */
+  line-height: 1.6; /* Jarak antar baris */
+  max-width: 700px; /* Lebar maksimum paragraf */
+  margin: 0 auto 20px; /* Margin untuk paragraf */
+}
+
+/* Featured */
+.featured {
+  margin-bottom: 40px;
+  text-align: center; /* Atur teks di tengah */
+}
+
+.featured h2 {
+  font-size: 36px; /* Ukuran font judul */
+  margin-bottom: 20px; /* Margin bawah judul */
+  color: #111111; /* Warna judul */
+  font-weight: bold; /* Teks lebih tebal */
+}
+
+.featured p {
+  font-size: 16px; /* Ukuran font paragraf */
+  line-height: 1.6; /* Jarak antar baris */
+  max-width: 700px; /* Lebar maksimum paragraf */
+  margin: 0 auto 20px; /* Margin untuk paragraf */
+}
+
+/* Footer */
+.footer {
+  background-color: #333; /* Warna latar belakang footer */
+  color: #fff; /* Warna teks footer */
+  padding: 40px 0; /* Padding footer */
+  text-align: center; /* Teks footer di tengah */
+  position: relative; /* Untuk menambahkan posisi relatif */
+  bottom: 0; /* Posisi footer di bagian bawah */
+  width: 100%; /* Lebar footer penuh */
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column; /* Atur elemen untuk vertikal*/
+  align-items: center;
+  flex-wrap: wrap; /* Membungkus elemen ke baris baru jika diperlukan */
+}
+
+.footer .logo {
+  /* Menghapus margin kanan */
+  margin-right: 0;
+  /* Menyelaraskan logo ke tengah */
+  text-align: center;
+}
+
+.footer .contact-info {
+  display: flex;
+  justify-content: space-between; /* Atur elemen untuk rata kanan-kiri */
+  align-items: center;
+  width: 100%; /* Lebar contact-info penuh */
+  margin-top: 30px; /* Margin atas contact-info */
+}
+
+.footer .contact-info div {
+  /* Mengatur margin untuk elemen contact-info */
+  margin: 0 20px; 
+}
+
+.footer .quote-button {
+  /* Menambahkan gaya untuk tombol Get a Quote */
+  background-color: #ff7b00; /* Warna latar belakang tombol */
+  color: #fff; /* Warna teks tombol */
+  padding: 12px 25px; /* Padding tombol */
+  border: none; /* Menghilangkan border */
+  border-radius: 5px; /* Mengatur border-radius */
+  font-weight: bold; /* Mengatur font-weight */
+  cursor: pointer; /* Mengatur kursor menjadi pointer */
+  transition: all 0.3s ease; /* Menambahkan transisi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan box-shadow */
+}
+
+.footer .quote-button:hover {
+  /* Efek hover untuk tombol */
+  background-color: #ffcc00; /* Warna latar belakang saat hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Menambahkan box-shadow */
+  transform: translateY(-2px); /* Mengangkat tombol sedikit */
+}
+
+.footer .social-icons {
+  margin-top: 30px; /* Margin atas social-icons */
+  width: 100%; /* Lebar social-icons penuh */
+  display: flex;
+  justify-content: center; /* Atur elemen untuk rata ke tengah */
+}
+
+.footer .social-icons a {
+  /* Mengatur jarak antar ikon social media */
+  margin: 0 10px;
+  font-size: 24px; /* Mengatur ukuran font ikon */
+  transition: all 0.3s ease; /* Menambahkan transisi */
+  color: #ffcc00; /* Warna ikon */
+}
+
+.footer .social-icons a:hover {
+  /* Efek hover untuk ikon social media */
+  color: #d4af37; /* Warna ikon saat hover */
+  transform: scale(1.1); /* Mengatur skala ikon saat hover */
+}
+
+.logo-text {
+  font-family: 'Keania One', sans-serif;
+  font-size: 24px;}
